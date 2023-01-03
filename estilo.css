@@ -1,0 +1,71 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: 'Rubik', sans-serif;
+	font-size: 20px;
+}
+
+.container {
+	border: 3px solid rgb(0, 0, 0);
+	border-radius: 20px;
+	padding: 15px;
+	margin: 15px;	
+}
+
+.fotocv {
+	width: 200px;
+	height: 200px;
+	border-radius: 20px;
+}
+
+.logotipo {
+	height: 150px;
+	width: 160px;
+	margin: 10px;
+}
+
+p::before {
+	transform: scaleX(0);
+	transform-origin: bottom right;
+}
+
+p:hover::before {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+p::before {
+	content: " ";
+	display: block;
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;	
+	background: rgb(153, 221, 255);	
+	z-index: -1;
+	transition: transform .5s ease;
+
+}
+
+p {
+	position: relative;
+	z-index: 1;
+
+}
+
+#button {
+	background-color:rgb(164, 164, 164);
+	border-radius: 5px;
+	border: 1px solid rgb(0, 0, 0);
+	padding: 6px;
+
+
+}
+
+html {
+	block-size: 100%;
+	inline-size: 100%;
+  }
+
+
+
+/*hay que ir adaptando todo a bootstrap y cambiar los colores por codigos/*
