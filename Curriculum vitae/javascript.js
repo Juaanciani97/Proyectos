@@ -1,6 +1,9 @@
 document.getElementById('button').onclick = function datainfo () {
-    document.getElementById('demo').innerHTML = "¡Copied contact number!"
+    document.getElementById('demo').innerHTML = "¡Copied!"
 }
+
+localStorage.setItem("contactnumber", 123456789);
+console.log(localStorage.getItem("contactnumber"));
 
 
 
@@ -14,7 +17,7 @@ const sendform = (event) => {
         event.target.email.value
     );
 
-    document.getElementById('emailsent').innerHTML = "¡Sent to console!"
+    document.getElementById('emailsent').innerHTML = "¡Received in console!"
 };
 
 form.addEventListener('submit', sendform);
