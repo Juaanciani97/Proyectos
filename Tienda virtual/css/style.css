@@ -1,0 +1,252 @@
+:root {
+    --colorPrimario: #a0a;
+    --colorPrimarioOscuro: #606;
+    --colorSecundario: #ffCE00;
+    --colorTerciario: #ffffff;
+    --fuentePrincpal: 'Staatliches', cursive;
+}
+
+/* globales */
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit; 
+}
+
+body {
+    font-size: 16px; /* 1 rem= 10px */ 
+    background-color: var(--colorPrimario);
+    font-family: 'Staatliches', cursive;
+   
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 100%;
+}
+main {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/*Index propiedades */
+
+footer {
+    text-align: center;
+    background-color: var(--colorPrimarioOscuro);
+    padding: 1.5rem;
+    color: var(--colorTerciario);
+    font-size: 2.2rem;
+    margin-top: 2rem;
+}
+
+.logo {
+    padding: 3rem;
+}
+
+.navegacion {
+    background-color: var(--colorPrimarioOscuro);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.navegacion__enlace {
+    color: var(--colorTerciario);
+    text-decoration: none;
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+.navegacion__enlace:hover {
+    color: var(--colorSecundario);
+}
+
+.navegacion__enlace--activo {
+    color: var(--colorSecundario);
+}
+
+h1 {
+    font-size: 4rem;
+    color: var(--colorSecundario);
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    gap: 2rem;
+}
+
+@media (min-width:786px) {
+    .grid {grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+.producto {
+    
+    background-color: var(--colorPrimarioOscuro);
+    padding: 1rem; 
+}
+
+.producto__imagen {
+    text-decoration: none;
+    text-align: center;
+}
+
+.producto__nombre {
+    color: var(--colorTerciario);
+    font-size: 4rem;
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+
+.producto__precio {
+    color: var(--colorSecundario);
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.grafico {
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1 / 3;
+}
+.grafico--camisas {
+    background-image: url(../img/grafico1.jpg);
+    grid-row: 2 / 3;
+}
+
+.grafico--node {
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 8 / 9;
+}
+@media (min-width: 768px) {
+    .grafico--node {
+        grid-column: 2 / 4;
+        grid-row: 5 / 6;
+    }
+}
+
+/* Nosotros */
+.titulo-nosotros {
+    color: var(--colorSecundario);
+    text-align: center;
+}
+
+.nosotros-grid p {
+    font-size: 2.2rem;
+    color: var(--colorTerciario);
+}
+
+.nosotros-grid {
+     display: flex;
+     flex-direction: column-reverse;
+}
+@media (min-width: 768px) {
+    .nosotros-grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        column-gap: 2rem;
+    }
+}
+
+.motivos-grid {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-size: 2rem;
+}
+@media (min-width: 768px) {
+    .motivos-grid {
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
+
+.motivos-grid h3 {
+    color: var(--colorSecundario);
+    font-size: 3rem;
+    margin: 0;
+}
+
+.motivos-grid p {
+    color: var(--colorTerciario);
+}
+
+/* Producto propiedades */
+
+/*
+.contenedor-productos {
+    
+}*/
+ 
+.producto-h1 {
+    padding: 1rem;
+}
+@media (min-width: 768px) {
+    .contenedor-productos {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        column-gap: 2rem;
+    }
+}
+
+.contenedor-productos p {
+    color: var(--colorTerciario);
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.formulario__select {
+    border: 1rem solid var(--colorPrimarioOscuro);
+    background-color: transparent;
+    padding: 1rem;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.formulario__number {
+    border: 1rem solid var(--colorPrimarioOscuro);
+    background-color: transparent;
+    padding: 1rem;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.formulario__submit {
+    width: 100%;
+    color: #000000;
+    font-size: 2rem;
+    background-color: var(--colorSecundario);
+    border: none;
+    padding: 2rem;
+    grid-column: 1 / 3;
+    margin-top: 2rem;
+}
+
+.formulario__submit:hover {
+    cursor: pointer;
+}
+
