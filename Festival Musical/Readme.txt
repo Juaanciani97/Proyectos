@@ -1,0 +1,2 @@
+El propósito de este proyecto era crear una pagina que simule un festival musical utilizando 
+SCSS y Gulp con mi base de HTML,CSS y JavaScript. Incluye un poco de manejo de paquetes con NPM y dependencias.

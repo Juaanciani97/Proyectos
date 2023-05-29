@@ -1,0 +1,1 @@
+El propósito de este proyecto era seguir practicando mis bases con HTML, CSS y incluir una biblioteca como modernizer. 
