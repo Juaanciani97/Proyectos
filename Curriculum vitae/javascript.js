@@ -1,26 +1,66 @@
-document.getElementById('button').onclick = function datainfo () {
-    document.getElementById('demo').innerHTML = "¡Copied!"
-}
-
-localStorage.setItem("contactnumber", 123456789);
-console.log(localStorage.getItem("contactnumber"));
-
-
-
+// Variables //
+const btn = document.querySelector('#button');
+const alertspawn = document.querySelector('.alert-spawn');
 const form = document.querySelector('#form-1');
 
-const sendform = (event) => {
-    event.preventDefault();
+let email = document.querySelector('#email');
+let reg = /@/;
 
-    console.log(
-        event.target.name.value,
-        event.target.email.value
-    );
+//Eventos//
+btn.addEventListener('click', copyData);
+form.addEventListener('submit', sendform);
+//Funciones//
 
-    document.getElementById('emailsent').innerHTML = "¡Received in console!"
+function sendform(e) {
+    e.preventDefault();
+
+    if (reg.test (email.value)) {
+        formAlert('Received on console');
+        console.log(
+            e.target.name.value,
+            e.target.email.value);
+    } else {
+        errorAlert('is not an email');
+    }
 };
 
-form.addEventListener('submit', sendform);
+function formAlert(e) {
+    const sent = document.createElement('P');
+    sent.textContent = e;
+    sent.classList.add('alert-copy');
+    form.appendChild( sent );
+
+    setTimeout( () => {
+        sent.remove();  
+    }, 5000);
+}
+
+function errorAlert(e) {
+    const error = document.createElement('P');
+    error.textContent = e;
+    error.classList.add('error-copy');
+    form.appendChild( error );
+
+    setTimeout( () => {
+        error.remove();  
+    }, 5000);
+}
+
+function copyData() { 
+    navigator.clipboard.writeText('77181223');
+
+    const alert = document.createElement('P');     
+    alert.textContent = 'Copied';
+    alert.classList.add('alert-copy');
+    alertspawn.appendChild( alert );
+
+    setTimeout( () => {
+        alert.remove();  
+    }, 5000);
+}
+// Local storage auto-save info //
+localStorage.setItem("contactnumber", 77181223);
+console.log(localStorage.getItem("contactnumber"));
 
 
 

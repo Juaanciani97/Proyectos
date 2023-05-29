@@ -1,18 +1,33 @@
+/* Global */
+html {
+	box-sizing: border-box; 
+  }
+
+body {
+	max-width: 1000px;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
 	font-family: 'Rubik', sans-serif;
 	font-size: 20px;
 }
 
-.container {
-	border: 3px solid rgb(0, 0, 0);
-	border-radius: 20px;
-	padding: 15px;
-	margin: 15px;	
+/* Utilidades */
+.content-center {
+	margin: 0 auto;
 }
 
+.container {
+	margin: 10px;
+	border: 3px solid rgb(0, 0, 0);
+	border-radius: 20px;
+	padding: 15px;	
+}
+/* Multimedia */
 .fotocv {
 	width: 200px;
 	height: 200px;
@@ -20,22 +35,23 @@
 }
 
 .logotipo {
-	height: 150px;
-	width: 160px;
+	padding: 10px 0px;
+	height: 130px;
+	width: 120px;
 	margin: 10px;
 }
-
-p::before {
+/* Text Animation */
+.text-style p::before {
 	transform: scaleX(0);
 	transform-origin: bottom right;
 }
 
-p:hover::before {
+.text-style p:hover::before {
 	transform: scaleX(1);
 	transform-origin: bottom left;
 }
 
-p::before {
+.text-style p::before {
 	content: " ";
 	display: block;
 	position: absolute;
@@ -46,22 +62,47 @@ p::before {
 
 }
 
-p {
+.text-style p {
 	position: relative;
 	z-index: 1;
-
 }
 
+/* Diseño de botones, enlaces y Alertas */
 #button {
-	background-color:rgb(164, 164, 164);
+	background-color:rgb(244, 186, 38);
 	border-radius: 5px;
 	border: 1px solid rgb(0, 0, 0);
 	padding: 6px;
-
-
 }
 
-html {
-	block-size: 100%;
-	inline-size: 100%;
-  }
+.a-decoration {
+	display: inline-block;
+	text-decoration: none;
+	background-color: #313231;
+	padding: 6px;
+	color: #ffffff;
+	margin-top: 10px;
+	border-radius: 5px;
+}
+
+.a-decoration:hover {
+	color: rgb(244, 186, 38);
+}
+
+.alert-copy {
+	background-color: #279af2;
+	border-radius: 10px;
+	width: 25%;
+	text-align: center;
+	color: #ffffff;
+	margin: 10px 0;
+}
+
+.error-copy {
+	background-color: #fdb11a;
+	border-radius: 10px;
+	width: 25%;
+	text-align: center;
+	color: #ffffff;
+	margin: 10px 0;
+}
